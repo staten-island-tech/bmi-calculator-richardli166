@@ -18,6 +18,9 @@ test(integer);
 //Boolean true or false
 const boolean = true;
 test(boolean);
+let truthy = true;
+let falsey = false;
+
 
 function add(number, number2){
     console.log(number+number2)
@@ -35,12 +38,9 @@ const sum = add
 function bmicalculator(height, weight){
     return ((weight/(height*height))*10000);
 }
-let name = (prompt("Enter your Name"))
-let weight = Number(prompt("Enter your weight in kg"))
-let height = Number(prompt("Enter your height in cm"));
-const user = bmicalculator(height, weight)
+let username = (prompt("Enter your Name"))
+let userweight = Number(prompt("Enter your weight in kg"))
+let userheight = Number(prompt("Enter your height in cm"));
+const user = bmicalculator(userheight, userweight)
 console.log(name)
 console.log(user)
-function print(value){
-    document.getElementById('log').innerHTML += value;
-}
