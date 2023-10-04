@@ -35,12 +35,27 @@ function add(x, y){
 }
 const sum = add
  */
-function bmicalculator(height, weight){
-    return ((weight/(height*height))*10000);
+function bmicalculator(userheight, userweight){
+    return ((userweight/(userheight*userheight))*10000);
 }
 let username = (prompt("Enter your Name"))
 let userweight = Number(prompt("Enter your weight in kg"))
 let userheight = Number(prompt("Enter your height in cm"));
 const user = bmicalculator(userheight, userweight)
-console.log(name)
-console.log(user)
+const name = username
+console.log(username)
+function check (bmicalculator){
+    if(bmicalculator < "18.5"){
+        console.log("underweight");
+    }
+    else if(bmicalculator === "18.5-24.9"){
+        console.log("healthy");
+    }
+    else if(bmicalculator === "25-29.9"){
+        console.log("overweight")
+    }
+    else if(bmicalculator > "30"){
+        console.log("You are fat")
+    }
+}
+check(bmicalculator(userheight, userweight))
