@@ -38,10 +38,7 @@ const sum = add
 function bmicalculator(userheight, userweight){
     return ((userweight/(userheight*userheight))*10000);
 }
-let username = (prompt("Enter your Name"))
-let userweight = Number(prompt("Enter your weight in kg"))
-let userheight = Number(prompt("Enter your height in cm"));
-const user = bmicalculator(userheight, userweight)
+
 function check (bmicalculator){
     if(bmicalculator < 18.5){
         return ("underweight");
@@ -53,8 +50,12 @@ function check (bmicalculator){
         return ("FAT");
     }
 }
-check(bmicalculator(userheight, userweight))
 
-console.log(username)
-console.log("BMI= " + bmicalculator(userheight, userweight))
-console.log("You are " + check (bmicalculator(userheight, userweight)))
+let username = prompt("Enter your Name");
+let userweight = Number(prompt("Enter your weight in kg"));
+let userheight = Number(prompt("Enter your height in cm"));
+const bmi = bmicalculator(userheight, userweight);
+
+console.log(username);
+console.log("BMI= " + bmi);
+console.log("You are " + check(bmi));
