@@ -43,16 +43,13 @@ let userweight = Number(prompt("Enter your weight in kg"))
 let userheight = Number(prompt("Enter your height in cm"));
 const user = bmicalculator(userheight, userweight)
 function check (bmicalculator){
-    if(bmicalculator < "18.5"){
+    if(bmicalculator < 18.5){
         return ("underweight");
-    }
-    else if(bmicalculator === "18.5-24.9"){
+    } else if(bmicalculator < 25){
         return ("healthy");
-    }
-    else if(bmicalculator === "25-29.9"){
+    } else if(bmicalculator < 30){
         return ("overweight");
-    }
-    else if(bmicalculator > "30"){
+    }  else {
         return ("FAT");
     }
 }
@@ -60,4 +57,4 @@ check(bmicalculator(userheight, userweight))
 
 console.log(username)
 console.log("BMI= " + bmicalculator(userheight, userweight))
-console.log("You are " + check (bmicalculator))
+console.log("You are " + check (bmicalculator(userheight, userweight)))
