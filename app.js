@@ -54,6 +54,7 @@ function check (bmicalculator){
 let username = prompt("Enter your Name");
 let userweight = Number(prompt("Enter your weight in kg"));
 let userheight = Number(prompt("Enter your height in cm"));
+
 const bmi = bmicalculator(userheight, userweight);
 
 console.log(username);
