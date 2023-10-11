@@ -42,9 +42,9 @@ function bmicalculator(userheight, userweight){
 function check (bmicalculator){
     if(bmicalculator < 18.5){
         return ("underweight");
-    } else if(bmicalculator < 25){
+    } else if(bmicalculator >=18.5 && bmicalculator <25){
         return ("healthy");
-    } else if(bmicalculator < 30){
+    } else if(bmicalculator >=25 && bmicalculator <30){
         return ("overweight");
     }  else {
         return ("FAT");
